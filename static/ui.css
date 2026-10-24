@@ -1,0 +1,24 @@
+:root { color-scheme: light dark; --ink: #1b2030; --bg: #fff; --line: #d9dee8; --accent: #ff5c42; --muted: #6b7489; }
+@media (prefers-color-scheme: dark) { :root { --ink: #eef1f8; --bg: #161b28; --line: #2c3447; --muted: #97a0b5; } }
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+.popup { width: 340px; padding: 14px; }
+h1 { font-size: 16px; margin: 0 0 10px; }
+.cc-search input { width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); color: var(--ink); font: inherit; }
+.cc-results { display: flex; flex-direction: column; gap: 4px; margin-top: 6px; color: var(--muted); }
+.cc-result { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; text-align: left; padding: 7px 9px; border: 1px solid var(--line); border-radius: 9px; background: transparent; color: var(--ink); cursor: pointer; font: inherit; }
+.cc-result:hover { border-color: var(--accent); }
+.cc-result span { color: var(--muted); font-size: 12px; }
+.cc-hint { color: var(--muted); font-size: 12.5px; margin: 10px 0 8px; }
+.cc-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+.cc-tools button { padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--ink); cursor: pointer; font: inherit; font-size: 13px; }
+.cc-tools button:hover { border-color: var(--accent); }
+.cc-promo { display: flex; gap: 6px; align-items: flex-start; margin-top: 14px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 9px; font-size: 12px; color: var(--muted); }
+.cc-promo a, a.cc-promo { color: var(--muted); text-decoration: none; }
+a.cc-promo { display: block; }
+.cc-promo b { color: var(--ink); font-size: 12.5px; }
+.cc-promo:hover { border-color: var(--accent); }
+.cc-promo button { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 14px; line-height: 1; }
+.cc-source { color: var(--muted); font-size: 11px; margin: 12px 0 0; }
+.mappage, .mappage #map { height: 100vh; width: 100vw; }
+.mappage #panel { position: absolute; top: 14px; left: 14px; z-index: 1100; width: 320px; max-width: calc(100vw - 28px); background: var(--bg); border-radius: 12px; padding: 12px; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); }
